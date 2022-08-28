@@ -5,10 +5,15 @@
 </head>
 <body>
     <h1>Created 10 List Items</h1>
-    <ul>
+    <ol>
      {% for x in range(1,11) %}
         <li>List item {{ x }} </li>
+        <ul>
+            {% for y in range(1,4) %}    
+                <li>Sublist item {{ y }} </li>
+            {% endfor %}
+        </ul>    
      {% endfor %}
-    </ul>
+    </ol>
 </body>
 </html>

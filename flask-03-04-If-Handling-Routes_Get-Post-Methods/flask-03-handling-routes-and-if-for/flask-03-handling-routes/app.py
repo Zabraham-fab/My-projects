@@ -8,7 +8,7 @@ app = Flask(__name__)
 # and assign route of no path ('/')
 @app.route("/")
 def home():
-    return 'This is home page for no path, <h1> Welcome Home</h1>' 
+    return 'This is home page for no path,  Zabraham <h1> Welcome Home ZABRAHAM </h1> ' 
 
 
 
@@ -16,14 +16,14 @@ def home():
 # and assign to the static route of ('about')
 @app.route('/about')
 def about():
-    return '<h1>This is my about page </h1>'
+    return '<h1>This is my about page </h1> <h2> Zabraham </h2>'
 
 
 # Create a function named error which returns a formatted string '<h1>Either you encountered an error or you are not authorized.</h1>' 
 # and assign to the static route of ('error')
 @app.route('/error')
 def error():
-    return '<h1>Either you encountered an error or you are not authorized.</h1>'
+    return '<h1>Either you encountered an error or you are not authorized. But , authorized is Zabraham.</h1>'
 
 
 
@@ -60,7 +60,7 @@ def admin():
 # and assign to the route of ('/greet-admin')
 @app.route('/greet-admin')
 def greet_admin():
-    return redirect(url_for('greet', name='Master Admin!!!!'))
+    return redirect(url_for('greet', name='Master Zabraham!!!!'))
 
 
 
