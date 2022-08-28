@@ -1,0 +1,1 @@
+Adding and increasing volumes and related file systems are defined in AWS EC2 instance. And also partition operations were made.
