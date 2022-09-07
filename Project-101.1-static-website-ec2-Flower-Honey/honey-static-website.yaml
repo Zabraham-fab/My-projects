@@ -2,12 +2,12 @@ AWSTemplateFormatVersion: 2010-09-09
 Description: |
   This CloudFormation Template was written for
   running Kittens Carousel Static Website on EC2.
-  Kittens Carousel Static Website will be
+  Honey-Flower Sale Static Website will be
   deployed on Amazon Linux 2
   (ami-05fa00d4c63e32376) EC2 Instance with
   custom security group which allows http
   connections on port 80 and ssh port 22 from
-  anywhere. Kittens Carousel Static Website
+  anywhere. Honey-Flower Sale Static Website
   is downloaded from my Public Github repository,
   then deployed on Apache Web Server.
 
@@ -43,13 +43,26 @@ Resources:
             #!/bin/bash
             yum update -y
             yum install httpd -y
-            FOLDER="https://raw.githubusercontent.com/Zabraham-fab/My-projects/main/Project-101-static-website-ec2-kittens-carousel/static-web"
+            FOLDER="https://raw.githubusercontent.com/Zabraham-fab/My-projects/main/Project-101.1-static-website-ec2-Flower-Honey/static-web"
             cd /var/www/html
             wget $FOLDER/index.html
-            wget $FOLDER/cat0.jpg
             wget $FOLDER/cat1.jpg
+            wget $FOLDER/cat4.jpg
             wget $FOLDER/cat2.jpg
-            wget $FOLDER/cat3.png
+            wget $FOLDER/cat7.jpg
+            wget $FOLDER/cat8.jpg
+            wget $FOLDER/cat9.jpg
+            wget $FOLDER/cat10.jpg
+            wget $FOLDER/cat11.jpg
+            wget $FOLDER/com.jpg
+            wget $FOLDER/er0.jpg
+            wget $FOLDER/erz1.jpg
+            wget $FOLDER/hon.jpg
+            wget $FOLDER/hon11.jpg
+            wget $FOLDER/hon2.jpg
+            wget $FOLDER/hon3.jpg
+            wget $FOLDER/logo1.png
+            wget $FOLDER/price.png
             systemctl start httpd
             systemctl enable httpd
 
@@ -58,4 +71,4 @@ Outputs:
     Value: !Sub
       - http://${PublicAddress}
       - PublicAddress: !GetAtt WebServerHost.PublicDnsName
-    Description: Kittens Carousel Application URL
+    Description: Honey-Flower Sale Application URL
