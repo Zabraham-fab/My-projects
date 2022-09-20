@@ -1,0 +1,6 @@
+$ echo -e $(cat certificate.pem)
+
+cat certificate.pem | sed 's/\\n/\n/g' | tee new.pem
+
+#!/bin/bash
+awk '{gsub(/\\n/,"\n")}1' certificate.pem | tee new.pem
