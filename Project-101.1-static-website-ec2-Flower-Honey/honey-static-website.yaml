@@ -58,7 +58,7 @@ Resources:
             wget $FOLDER/er0.jpg
             wget $FOLDER/erz1.jpg
             wget $FOLDER/hon.jpg
-            wget $FOLDER/hon11.jpg
+            wget $FOLDER/hon1.jpg
             wget $FOLDER/hon2.jpg
             wget $FOLDER/hon3.jpg
             wget $FOLDER/logo1.png
